@@ -2819,3 +2819,119 @@ body {
         transform: translateY(0);
     }
 }
+
+
+/* =========================================
+   CORRECCIÓN DEFINITIVA PARA TELÉFONOS
+   INICIO, SOBRE NOSOTROS Y NUESTRA MISIÓN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* INICIO: una sola columna */
+    .hero-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        gap: 28px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        min-width: 0;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* SOBRE NOSOTROS: una sola columna */
+    .about-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        gap: 28px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        min-width: 0;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* NUESTRA MISIÓN: una tarjeta por fila */
+    .mission-container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .mission-cards {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        gap: 18px;
+    }
+
+    .mission-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: auto;
+        padding: 30px 24px;
+        overflow-wrap: break-word;
+    }
+
+    .mission-card h3,
+    .mission-card p {
+        overflow-wrap: break-word;
+    }
+}
+
+/* TELÉFONOS MUY PEQUEÑOS */
+@media (max-width: 380px) {
+
+    .hero-title {
+        font-size: clamp(36px, 11vw, 46px);
+        overflow-wrap: break-word;
+    }
+
+    .about-title,
+    .mission-title {
+        font-size: clamp(34px, 10vw, 40px);
+        overflow-wrap: break-word;
+    }
+
+    .hero-image,
+    .about-image {
+        aspect-ratio: 4 / 3;
+    }
+}
